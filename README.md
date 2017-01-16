@@ -15,3 +15,6 @@ The code first fits a plane though you data points (NOTE: to successfuly fit a p
 
 ## Something's wrong, my fits are failing!
 One of the assumptions I have made is that the radius of the circle is always R = 1, and it is always centered at C=(0, 0, 0). With this I have simplified the model, as I was fitting angular data (which you can easily transform to [Cartesian coordinates](https://en.wikipedia.org/wiki/Spherical_coordinate_system#Cartesian_coordinates)), so I could make those assumptions. If you want to fit the radius and the centre of the great circle, you will need to modify the greatCircle funtion to take those parameters into account (take a look at parametrically defining a [circle in 3D](http://demonstrations.wolfram.com/ParametricEquationOfACircleIn3D/)).
+
+## References
+Curt F. Marcus, "A note on fitting great circles by least squares", Communications of the ACM, Volume 4 Issue 8, Aug. 1961, Page 353
