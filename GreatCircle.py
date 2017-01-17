@@ -35,8 +35,8 @@ def greatCircle(t, theta0, phi0):
 
     Arguments:
         t: [float or 1D ndarray] phase angle of the point in the great circle
-        theta0: [float] nodal angle of the great circle
-        phi0: [float] inclination of the great circle
+        theta0: [float] inclination of the great circle ('roll' in respect to phase=0, aka. red dot)
+        phi0: [float] nodal angle of the great circle ('yaw' in respect to phase=0, aka. red dot)
 
     Return:
         [tuple or 2D ndarray] a tuple of (X, Y, Z) coordinates in 3D space (becomes a 2D ndarray if the input
@@ -89,7 +89,8 @@ if __name__ == "__main__":
 
     # Generate random great circle data
     t_range = np.arange(0, np.random.rand()*2*np.pi, 0.05)
-    x_data, y_data, z_data = greatCircle(t_range, np.random.rand(), np.random.rand() + 1)
+    #x_data, y_data, z_data = greatCircle(t_range, np.random.rand(), np.random.rand() + 1)
+    x_data, y_data, z_data = greatCircle(t_range, np.radians(40), np.radians(45))
 
     # Fit the great circle
     C, theta0, phi0 = fitGreatCircle(x_data, y_data, z_data)
