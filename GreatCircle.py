@@ -89,8 +89,7 @@ if __name__ == "__main__":
 
     # Generate random great circle data
     t_range = np.arange(0, np.random.rand()*2*np.pi, 0.05)
-    #x_data, y_data, z_data = greatCircle(t_range, np.random.rand(), np.random.rand() + 1)
-    x_data, y_data, z_data = greatCircle(t_range, np.radians(40), np.radians(45))
+    x_data, y_data, z_data = greatCircle(t_range, np.random.rand(), np.random.rand() + 1)
 
     # Fit the great circle
     C, theta0, phi0 = fitGreatCircle(x_data, y_data, z_data)
