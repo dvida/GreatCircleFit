@@ -92,7 +92,7 @@ if __name__ == "__main__":
     x_data, y_data, z_data = greatCircle(t_range, np.random.rand(), np.random.rand() + 1)
 
     # Fit the great circle
-    C, theta0, phi0 = fitGreatCirclePicks(x_data, y_data, z_data)
+    C, theta0, phi0 = fitGreatCircle(x_data, y_data, z_data)
 
     # Make a grid of independant variables
     X,Y = np.meshgrid(np.arange(-1.0, 1.0, 0.1), np.arange(-1.0, 1.0, 0.1))
